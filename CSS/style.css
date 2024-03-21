@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@font-face {
+  font-family: "Saint Carell";
+  src: url(../FONTS/saint_carell/SaintCarell_PERSONAL_USE_ONLY.otf);
+}
+@font-face {
+  font-family: "Saint Carell Low";
+  src: url(../FONTS/saint_carell/SaintCarellClean_PERSONAL_USE_ONLY.otf);
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url(../FONTS/Outfit/Outfit-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Tusker Grotesk";
+  src: url(../FONTS/Tusker_Grotesk/TuskerGrotesk-2600Semibold.ttf);
+}
+@font-face {
+  font-family: "Neue Montreal";
+  src: url(../FONTS/Neue_Montreal/NeueMontreal-Regular.otf);
+}
+@font-face {
+  font-family: "Migra";
+  src: url(../FONTS/Migra/Migra/Migra-Extrabold.otf);
+}
+@font-face {
+  font-family: "TypeOasis";
+  src: url(../FONTS/CapitalisTypOasis.ttf);
+}
+
+:root{
+  --main : #ffffff;
+  --secondary : #4EFFE2;
+  --tertiary : #3fc4ae;
+  --shadow : rgba(255, 255, 255, 0.6);
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 200vw;
+  height: 100vh;
+  background: url(../IMG/img-noise-2000x2000.png);
+  overflow-x: hidden;
+}
+.vh-95 {
+  height: 95vh !important;
+}
+.vh-5 {
+  height: 5vh !important;
+}
+.vh-200 {
+  height: 200vh !important;
+}
+.vh-20 {
+  height: 20vh !important;
+}
+.vh-70 {
+  height: 70vh !important;
+}
+
+.name h1 {
+  font-family: "Tusker Grotesk";
+  font-size: 297px;
+  color: var(--main);
+}
+.hey h2{
+  font-family: "Tusker Grotesk";
+  font-size: 70px;
+  color: var(--secondary) !important;
+}
+
+.subtitle {
+  display: flex;
+  align-items: center;
+  color: var(--main);
+  justify-content: center;
+  
+}
+
+.subtitle h2 {
+  -webkit-mask-image: url("../IMG/SVG/noise.svg");
+  font-family: "Tusker Grotesk";
+  font-size: 100px;
+  text-align: center;
+  color: var(--main);
+}
+.contenedor {
+  display: flex;
+}
+.navbar {
+  height: 5vh;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+.nav-link {
+  color: var(--main) !important;
+  font-family: "Neue Montreal";
+}
+.nav-link:hover{
+  color: var(--secondary) !important;
+}
+.aboutme {
+  font-family: "Neue Montreal";
+  font-size: 30px;
+}
+.info {
+  font-family: "Neue Montreal";
+  font-size: 30px;
+  color: var(--main);
+}
+.info span{
+  font-family: "Neue Montreal";
+  font-size: 30px;
+  color: var(--secondary);
+}
+.animation span {
+  transition: 0.1s;
+}
+.animation:hover span {
+  text-shadow: 0 0 1px var(--secondary), 0 0 4px var(--secondary),
+    0 0 8px var(--secondary);
+}
+.picture {
+  position: relative;
+  background-color: var(--main);
+  height: 402px;
+  width: 402px;
+  border-radius: 50%;
+  box-shadow: 0 0 100px rgba(255, 255, 255, 0.5);
+}
+.picture::before {
+  content: "";
+  position: absolute;
+  background: url(../IMG/redondo.png);
+  background-position-y: 144px;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: 500px;
+  z-index: 2;
+  inset: -200px;
+}
+.shadow {
+  text-shadow: 0 0 100px var(--shadow);
+}
+.ad{
+  font-family: "TypeOasis";
+  font-size: 30px;
+}
+
+@media (height<680px), screen and (orientation: portrait) {
+  .name h1 {
+    font-size: 150px;
+  }
+  .hey h1 {
+    font-size: 40px;
+  }
+  .info {
+    font-size: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+  }
+  .subtitle h2 {
+    -webkit-mask-image: url("../IMG/SVG/noise.svg");
+    font-family: "Tusker Grotesk";
+    font-size: 50px;
+    text-align: center;
+  }
+  .secondname h1 {
+    font-size: 90px;
+  }
+  .aboutme {
+    font-size: 15px;
+  }
+  #aboutme {
+    width: 80vw !important;
+    height: 50vh !important;
+  }
+
+  #model {
+    display: none !important;
+  } 
+  .logo img {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@keyframes backg {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 1%;
+  }
+}
